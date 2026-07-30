@@ -3,8 +3,20 @@
 A Vision-Language-Action (VLA) robot manipulation project based on smolVLA.
 This project builds an end-to-end robot learning pipeline, including robot demonstration collection, dataset processing, VLA policy training and real-world robot deployment.
 
-## 🎥 Demo
-Coming soon.
+## 🎥 Real Robot Demo
+<p align="center">
+<img src="assets/demo.gif" width="700">
+</p>
+
+## 🤖 Robot Setup
+<p align="center">
+<img src="assets/robot-setup.png" width="700">
+</p>
+
+## 🚀 Training Pipeline
+<p align="center">
+<img src="assets/pipeline.png" width="700">
+</p>
 
 ## 🧠 Overview
 Vision-Language-Action models enable robots to understand visual observations and language instructions, then generate corresponding robot actions.

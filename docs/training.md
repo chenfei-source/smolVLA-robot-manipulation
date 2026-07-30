@@ -1,5 +1,5 @@
-# Model Training
 
+# Model Training
 
 ## Overview
 
@@ -56,8 +56,10 @@ Output:
 # Pretrained Model
 
 
-The training starts from the pretrained smolVLA base model:/root/autodl-tmp/pretrained/smolvla_base
-
+The training starts from the pretrained smolVLA base model:
+```
+/root/autodl-tmp/pretrained/smolvla_base
+```
 
 The pretrained policy is fine-tuned on the Piper manipulation dataset.
 
@@ -88,12 +90,17 @@ lerobot-train \
   --env_eval_freq=0 \
   --wandb.enable=false \
   --policy.push_to_hub=false
+```
 
-Training Result
+# Training Result
 
 Training completed successfully.
 
-The trained checkpoints were saved:/root/autodl-tmp/checkpoints/
+The trained checkpoints were saved:
+```
+/root/autodl-tmp/checkpoints/
+```
+
 
 Notes
 
@@ -101,7 +108,7 @@ During experiments, task complexity had a significant impact on performance.
 
 The dataset included:
 
-Different object positions
-Multiple object categories
+- Different object positions
+- Multiple object categories
 
 For a 500M parameter VLA model, simpler and more consistent demonstrations are more suitable for achieving stable manipulation performance.

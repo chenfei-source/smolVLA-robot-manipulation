@@ -122,20 +122,25 @@ smolVLA-robot-manipulation
 │ └── demo.gif
 
 ├── configs
+│ └── smolvla.yaml
+
+├── dataset
+│ ├── data
+│ ├── meta
+│ └── videos
 
 ├── scripts
 │ ├── train.sh
 │ └── inference.sh
 
-├── examples
-│ └── inference_demo.py
-
 ├── docs
 │ ├── training.md
+│ ├── dataset.md
 │ └── deployment.md
 
 └── results
-└── videos
+│ ├── videos
+│ └── evaluation.md
 
 ## 📌 Future Work
 - Add robot execution videos

@@ -1,0 +1,140 @@
+{
+    "codebase_version": "v3.0",
+    "fps": 15,
+    "features": {
+        "action": {
+            "dtype": "float32",
+            "names": [
+                "shoulder_pan.pos",
+                "shoulder_lift.pos",
+                "elbow_flex.pos",
+                "wrist_flex.pos",
+                "wrist_roll.pos",
+                "gripper.pos"
+            ],
+            "shape": [
+                6
+            ]
+        },
+        "observation.state": {
+            "dtype": "float32",
+            "names": [
+                "joint_1.pos",
+                "joint_2.pos",
+                "joint_3.pos",
+                "joint_4.pos",
+                "joint_5.pos",
+                "joint_6.pos",
+                "gripper.pos"
+            ],
+            "shape": [
+                7
+            ]
+        },
+        "observation.images.front": {
+            "dtype": "video",
+            "shape": [
+                480,
+                640,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": {
+                "is_depth_map": false,
+                "video.height": 480,
+                "video.width": 640,
+                "video.codec": "av1",
+                "video.pix_fmt": "yuv420p",
+                "video.fps": 15,
+                "video.channels": 3,
+                "has_audio": false,
+                "video.g": 2,
+                "video.crf": 20,
+                "video.preset": 12,
+                "video.fast_decode": 0,
+                "video.video_backend": "pyav",
+                "video.extra_options": {}
+            }
+        },
+        "observation.images.wrist": {
+            "dtype": "video",
+            "shape": [
+                480,
+                640,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": {
+                "is_depth_map": false,
+                "video.height": 480,
+                "video.width": 640,
+                "video.codec": "av1",
+                "video.pix_fmt": "yuv420p",
+                "video.fps": 15,
+                "video.channels": 3,
+                "has_audio": false,
+                "video.g": 2,
+                "video.crf": 20,
+                "video.preset": 12,
+                "video.fast_decode": 0,
+                "video.video_backend": "pyav",
+                "video.extra_options": {}
+            }
+        },
+        "timestamp": {
+            "dtype": "float32",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "frame_index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "episode_index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "task_index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        }
+    },
+    "total_episodes": 105,
+    "total_frames": 27623,
+    "total_tasks": 2,
+    "chunks_size": 1000,
+    "data_files_size_in_mb": 100,
+    "video_files_size_in_mb": 200,
+    "data_path": "data/chunk-{chunk_index:03d}/file-{file_index:03d}.parquet",
+    "video_path": "videos/{video_key}/chunk-{chunk_index:03d}/file-{file_index:03d}.mp4",
+    "robot_type": "piper",
+    "splits": {
+        "train": "0:105"
+    }
+}

@@ -10,21 +10,22 @@ The trained smolVLA policy was deployed on a real Piper robotic arm using the Le
 
 The deployment system separates policy inference and robot execution.
 
+```text
 GPU Machine
-(smollVLA Policy Server)
+(smolVLA Policy Server)
 
-      |
+        |
+        | TCP Network
+        |
 
-      | Network
-
-      |
 Robot Computer
 (LeRobot Robot Client)
 
-      |
+        |
+        | CAN Bus
 
-      |
-Piper Robot Arm
+Piper Robotic Arm
+```
 
 
 ---
@@ -114,8 +115,7 @@ python -m lerobot.async_inference.robot_client \
 # Real Robot Evaluation
 Task:
 
-Pick fruit objects
-Place objects into target plate
+Pick fruit objects and place them into the target plate.
 
 Evaluation:
 
@@ -123,7 +123,13 @@ The trained policy was tested on real Piper hardware.
 
 Results:
 
-Successful autonomous grasping was achieved.
+The trained smolVLA policy successfully executed autonomous pick-and-place manipulation on the real Piper robot.
+The experiment demonstrated:
+
+- Vision-language conditioned manipulation
+- Closed-loop policy execution
+- Real-world robot deployment using LeRobot inference pipeline
+
 Performance was sensitive to object diversity and demonstration consistency.
 
 # Lessons Learned
@@ -131,7 +137,7 @@ For small-scale VLA models, data quality and task design are critical.
 
 Important factors:
 
-Demonstration consistency
-Object placement distribution
-Dataset complexity
-Action trajectory quality
+- Demonstration consistency
+- Object placement distribution
+- Dataset complexity
+- Action trajectory quality

@@ -1,0 +1,45 @@
+# smolVLA Robot Manipulation Configuration
+
+robot:
+  name: Piper
+  dof: 6
+  gripper: parallel_gripper
+
+camera:
+  type: RGB
+  fps: 15
+
+dataset:
+  name: real_robot_demonstrations
+  episodes: 105
+  frames: 27623
+  modalities:
+    - rgb_images
+    - robot_states
+    - action_trajectories
+    - language_instruction
+
+
+model:
+  name: smolVLA
+  vision_encoder: pretrained_vision_encoder
+  language_encoder: pretrained_language_encoder
+  policy_head: action_prediction_head
+
+
+training:
+  method: imitation_learning
+  batch_size: 16
+  learning_rate: 1e-4
+  epochs: 100
+
+
+evaluation:
+  metric:
+    - task_success_rate
+    - trajectory_error
+
+
+deployment:
+  robot_controller:
+    type: Piper_API

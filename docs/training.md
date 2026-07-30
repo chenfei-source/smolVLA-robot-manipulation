@@ -89,4 +89,19 @@ lerobot-train \
   --wandb.enable=false \
   --policy.push_to_hub=false
 
+Training Result
 
+Training completed successfully.
+
+The trained checkpoints were saved:/root/autodl-tmp/checkpoints/
+
+Notes
+
+During experiments, task complexity had a significant impact on performance.
+
+The dataset included:
+
+Different object positions
+Multiple object categories
+
+For a 500M parameter VLA model, simpler and more consistent demonstrations are more suitable for achieving stable manipulation performance.

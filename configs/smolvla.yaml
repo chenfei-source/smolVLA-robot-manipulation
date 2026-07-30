@@ -2,44 +2,38 @@
 
 robot:
   name: Piper
-  dof: 6
-  gripper: parallel_gripper
-
-camera:
-  type: RGB
-  fps: 15
+  type: 6-DoF robotic arm
 
 dataset:
-  name: real_robot_demonstrations
+  framework: LeRobot
+  root: /root/piper_record_test
   episodes: 105
   frames: 27623
-  modalities:
-    - rgb_images
-    - robot_states
-    - action_trajectories
-    - language_instruction
+  fps: 15
+
+  observations:
+    - observation.images.camera1
+    - observation.images.camera2
+    - robot_state
+
+  actions:
+    - joint_positions
+    - gripper_action
 
 
-model:
+policy:
   name: smolVLA
-  vision_encoder: pretrained_vision_encoder
-  language_encoder: pretrained_language_encoder
-  policy_head: action_prediction_head
+  pretrained_path: smolvla_base
 
 
 training:
-  method: imitation_learning
+  framework: LeRobot
+  command: lerobot-train
+
   batch_size: 16
-  learning_rate: 1e-4
-  epochs: 100
+  steps: 50000
+  save_frequency: 10000
 
 
-evaluation:
-  metric:
-    - task_success_rate
-    - trajectory_error
-
-
-deployment:
-  robot_controller:
-    type: Piper_API
+hardware:
+  accelerator: CUDA

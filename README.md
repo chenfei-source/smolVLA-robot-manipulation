@@ -52,19 +52,18 @@ Modalities:
 
 ## 🚀 Training Pipeline
 The complete workflow:
-Robot Demonstration Collection
+Piper Robot Demonstration Collection
 ↓
-Dataset Processing
+LeRobot Dataset Format
 ↓
-smolVLA Training
+smolvla Fine-tuning
 ↓
-Policy Evaluation
+Policy Checkpoint
 ↓
-Real Robot Deployment
+Real Robot Inference
 
 ## 🔥 Project Highlights
 - Built a complete Vision-Language-Action robot learning pipeline
-- Processed real robot demonstration data
 - Trained VLA policy for manipulation tasks
 - Deployed learned policy on physical robot platform
 

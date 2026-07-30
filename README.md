@@ -5,7 +5,7 @@ This project builds an end-to-end robot learning pipeline, including robot demon
 
 ## 🎥 Real Robot Demo
 <p align="center">
-<img src="assets/demo.gif" width="700">
+<img src="assets/demo_no_person.gif" width="700">
 </p>
 
 ## 🤖 Robot Setup

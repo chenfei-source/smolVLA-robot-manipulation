@@ -18,6 +18,39 @@ This project builds an end-to-end robot learning pipeline, including robot demon
 <img src="assets/pipeline.png" width="700">
 </p>
 
+## 📊 Results
+
+### Real Robot Evaluation
+
+The trained smolVLA policy was evaluated on the real Piper robotic arm.
+
+Task:
+> put the carrot on the plate.
+
+### Successful Execution
+
+The robot successfully follows the language instruction and completes the manipulation task.
+
+
+
+https://github.com/user-attachments/assets/dbfe49ba-1c83-4dd1-bfbc-d77fe7fef101
+
+
+
+
+### Failure Case Analysis
+
+Failure cases were mainly caused by:
+- Object position distribution shift
+- Limited demonstration diversity
+- Grasping uncertainty
+
+
+
+https://github.com/user-attachments/assets/36b05228-c338-40b3-9c07-bcfc7b5e05a2
+
+
+
 ## 🧠 Overview
 Vision-Language-Action models enable robots to understand visual observations and language instructions, then generate corresponding robot actions.
 This project explores how smolVLA can be applied to real-world robot manipulation tasks.

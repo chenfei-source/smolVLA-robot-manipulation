@@ -1,7 +1,7 @@
 # smolVLA-robot-manipulation
 
 A Vision-Language-Action (VLA) robot manipulation project based on smolVLA.
-This project builds an end-to-end robot learning pipeline, including robot demonstration collection, dataset processing, VLA policy training and real-world robot deployment.
+This project builds an end-to-end robot learning pipeline, including robot demonstration collection,  VLA policy training and real-world robot deployment.
 
 ## 🎥 Real Robot Demo
 <p align="center">

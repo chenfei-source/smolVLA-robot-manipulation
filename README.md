@@ -144,7 +144,6 @@ smolVLA-robot-manipulation
 
 ## 📌 Future Work
 - Add robot execution videos
-- Release training configuration
 - Improve policy evaluation
 - Add simulation experiments
 
